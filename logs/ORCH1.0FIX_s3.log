@@ -1,0 +1,20 @@
+ORCH1.0FIX params 76.7M steps 3051
+[W1108 02:31:36.675952968 CUDACachingAllocator.cpp:528] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 63635456, total: 16608133120).
+[W1108 02:31:36.706906973 CUDACachingAllocator.cpp:528] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 65732608, total: 16608133120).
+Traceback (most recent call last):
+  File "./train.py", line 723, in <module>
+    rec = dict(step=i, loss=loss.item(), t=time.time() - t0, ind=induction(), cs=copysplit(), hi=headind())
+                                                                                 ^^^^^^^^^^^
+  File "./train.py", line 678, in copysplit
+    with torch.autocast("cuda", torch.bfloat16): lg = model(x)
+                                                      ^^^^^^^^
+  File "~/casmi26/main/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/casmi26/main/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./train.py", line 419, in forward
+    logits = s.head(hout).float(); logits = 15 * torch.tanh(logits / 15)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 15.47 GiB of which 2.82 GiB is free. Process 6258 has 124.10 MiB memory in use. Process 51767 has 52.16 MiB memory in use. Process 2075519 has 66.41 MiB memory in use. Process 2546136 has 14.28 MiB memory in use. Including non-PyTorch memory, this process has 4.52 GiB memory in use. Process 759329 has 7.49 GiB memory in use. Of the allocated memory 4.13 GiB is allocated by PyTorch, and 106.70 MiB is reserved by PyTorch but unallocated.

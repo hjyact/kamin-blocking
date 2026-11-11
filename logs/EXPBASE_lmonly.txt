@@ -1,0 +1,1 @@
+EXPBASE_s0 {'full': 4.2563, 'lm_only': 4.2563}

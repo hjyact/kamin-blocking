@@ -1,0 +1,2 @@
+PTRL1_s0 top induction [(5, 4, 0.106), (6, 6, 0.01), (4, 5, 0.006)] | copy gain intact 0.481  -top1 0.156  -top2 0.114  -top3 0.091
+PTRL0_s0 top induction [(4, 6, 0.231), (4, 3, 0.006), (6, 4, 0.004)] | copy gain intact 1.670  -top1 0.202  -top2 0.190  -top3 0.177

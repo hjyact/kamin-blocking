@@ -1,0 +1,9 @@
+FINAL part_alone_s0 1.0 1.0 1.0
+FINAL part_mix_s0 0.6313 0.3346 1.0
+FINAL part_fix_s0 0.9999 0.9998 1.0
+FINAL part_alone_s1 1.0 1.0 1.0
+FINAL part_mix_s1 0.6344 0.3403 1.0
+FINAL part_fix_s1 0.9999 0.9998 1.0
+FINAL part_alone_s2 1.0 1.0 1.0
+FINAL part_mix_s2 0.6575 0.382 1.0
+FINAL part_fix_s2 1.0 1.0 1.0

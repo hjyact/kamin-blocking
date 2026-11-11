@@ -1,0 +1,11 @@
+XXXL_BASE_s1 seen 2.5413  new 5.5429  all 3.9276
+XXXL_COPY_s1 seen 2.9633  new 5.5047  all 4.1370
+XXXL_AUX1_s1 seen 2.5868  new 5.4858  all 3.9257
+XXXL_COPY_s1 full 3.8188  LM alone 4.1370 (seen 2.9633)  copy alone on seen 3.1550  mixture on seen 2.2756  seen frac 0.538
+XXXL_AUX1_s1 full 3.7831  LM alone 3.9257 (seen 2.5868)  copy alone on seen 3.1636  mixture on seen 2.2502  seen frac 0.538
+FINAL XXXL_AUX1 1 3.7650385936955826 6237s
+FINAL XXXL_BASE 1 3.9116530397032325 6220s
+FINAL XXXL_COPY 1 3.797071866084537 6325s
+XXXL_COPY_s1 best prev-token head 0.468 layer 3 | best induction head 0.089 layer 12 | heads with prev>0.5: 0 induction>0.3: 0 LM-head copy gain 0.437
+XXXL_AUX1_s1 best prev-token head 0.573 layer 2 | best induction head 0.343 layer 9 | heads with prev>0.5: 3 induction>0.3: 1 LM-head copy gain 2.219
+"hi": [0.4606, 0.0018]

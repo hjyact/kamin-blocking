@@ -1,0 +1,1 @@
+POEFIX_s0 {'full': 4.0974, 'lm_only': 4.2442}

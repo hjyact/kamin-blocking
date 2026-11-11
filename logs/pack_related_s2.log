@@ -1,0 +1,15 @@
+copy pretraining done, loss 1.696
+pack_related_s2 0 1.6152 closed-book recall 0.011
+pack_related_s2 250 0.8685 closed-book recall 0.6505
+pack_related_s2 500 0.0022 closed-book recall 1.0
+pack_related_s2 750 0.005 closed-book recall 0.9945
+pack_related_s2 1000 0.0035 closed-book recall 1.0
+pack_related_s2 1250 0.0113 closed-book recall 0.9965
+pack_related_s2 1500 0.0015 closed-book recall 0.9995
+pack_related_s2 1750 0.0008 closed-book recall 1.0
+pack_related_s2 2000 0.0007 closed-book recall 1.0
+pack_related_s2 2250 0.0005 closed-book recall 1.0
+pack_related_s2 2500 0.0004 closed-book recall 1.0
+pack_related_s2 2750 0.0004 closed-book recall 1.0
+pack_related_s2 3000 0.0405 closed-book recall 0.954
+FINAL pack_related_s2 0.954

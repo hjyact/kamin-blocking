@@ -1,0 +1,4 @@
+runs/K2CTLUP3_s0_step300.pt top3 [('L7H5', 0.056), ('L7H2', 0.046), ('L5H4', 0.045)] watch [('L3H2', 0.03), ('L6H1', 0.026)]
+runs/K2CTLUP3_s0_step800.pt top3 [('L3H2', 0.394), ('L3H4', 0.2), ('L5H4', 0.189)] watch [('L3H2', 0.394), ('L6H1', 0.07)]
+runs/K2CTLUP3_s0_step2400.pt top3 [('L3H4', 0.305), ('L3H2', 0.287), ('L5H4', 0.186)] watch [('L3H2', 0.287), ('L6H1', 0.078)]
+FINAL K2CTLUP3 0 4.248154262050253 617s

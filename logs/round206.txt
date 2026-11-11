@@ -1,0 +1,1 @@
+pointer-read head onset 194.1048034934498 end [0.17, 0.17]

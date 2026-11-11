@@ -1,0 +1,1 @@
+LONGAUX1_s0 {'full': 3.7463, 'lm_only': 3.8698}

@@ -1,0 +1,31 @@
+HDROP50 params 76.9M steps 3051
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0] Graph break from `Tensor.item()`, consider setting:
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0]     torch._dynamo.config.capture_scalar_outputs = True
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0] or:
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0]     env TORCHDYNAMO_CAPTURE_SCALAR_OUTPUTS=1
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0] to include these operations in the captured graph.
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0] 
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0] Graph break: from user code at:
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0]   File "./train.py", line 517, in forward
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0]     if s.training and A.hdrop > 0 and torch.rand(()).item() < A.hdrop: return -lpy.mean()   # helper dropout baseline: this micro-batch trains the LM alone
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0]                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0] 
+W1106 09:49:10.943000 4009431 torch/_dynamo/variables/tensor.py:1841] [0/0] 
+{"step": 0, "loss": 9.125312805175781, "t": 2.3564398288726807, "val": 9.07594217433304}
+{"step": 200, "loss": 5.360967636108398, "t": 45.519588232040405}
+{"step": 400, "loss": 4.960597991943359, "t": 81.76011490821838}
+{"step": 600, "loss": 4.904943943023682, "t": 118.00764846801758}
+{"step": 800, "loss": 4.63795804977417, "t": 154.25936269760132}
+{"step": 1000, "loss": 4.615601539611816, "t": 190.5107192993164, "val": 4.553980910387195}
+{"step": 1200, "loss": 4.722235679626465, "t": 233.2713143825531}
+{"step": 1400, "loss": 4.537505149841309, "t": 269.5120463371277}
+{"step": 1600, "loss": 4.644765853881836, "t": 305.74953746795654}
+{"step": 1800, "loss": 4.587060928344727, "t": 341.98167276382446}
+{"step": 2000, "loss": 4.822010040283203, "t": 378.2172634601593, "val": 4.2244810437569855}
+{"step": 2200, "loss": 4.208401679992676, "t": 420.9573132991791}
+{"step": 2400, "loss": 4.095070838928223, "t": 457.19018816947937}
+{"step": 2600, "loss": 4.248482704162598, "t": 493.4221317768097}
+{"step": 2800, "loss": 4.046058654785156, "t": 529.6541912555695}
+{"step": 3000, "loss": 4.207674980163574, "t": 565.8901569843292, "val": 4.0823888939912205}
+{"step": 3050, "loss": 3.801292657852173, "t": 581.4537672996521, "val": 4.079214365755925}
+FINAL HDROP50 1 4.079214365755925 588s

@@ -1,0 +1,1 @@
+CO_NODELEG_s0 {'full': 3.55, 'lm_only': 3.6111}

@@ -1,0 +1,7 @@
+rag_nopre_s2 0 8.0823 closed-book recall A(with passage) 0.005 B(never) 0.009
+rag_nopre_s2 1000 0.0027 closed-book recall A(with passage) 1.0 B(never) 1.0
+rag_nopre_s2 2000 0.0009 closed-book recall A(with passage) 1.0 B(never) 1.0
+rag_nopre_s2 3000 0.0004 closed-book recall A(with passage) 1.0 B(never) 1.0
+rag_nopre_s2 4000 0.0002 closed-book recall A(with passage) 1.0 B(never) 1.0
+rag_nopre_s2 5000 0.0001 closed-book recall A(with passage) 1.0 B(never) 1.0
+FINAL rag_nopre_s2 1.0 1.0

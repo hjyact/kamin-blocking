@@ -1,0 +1,1 @@
+EXPWMIX_s1 {'full': 6.4786, 'lm_only': 6.4786}

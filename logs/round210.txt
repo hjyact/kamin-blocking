@@ -1,0 +1,8 @@
+K2LONG
+runs/K2LONG_s0_step2000.pt top3 [('L3H2', 0.424), ('L4H1', 0.104), ('L4H5', 0.081)] watch [('L3H2', 0.424), ('L6H1', 0.01)]
+K2SOLO
+runs/K2SOLO_s0_step2000.pt top3 [('L3H2', 0.43), ('L4H6', 0.094), ('L6H4', 0.091)] watch [('L3H2', 0.43), ('L6H1', 0.015)]
+KALONG
+runs/KALONG_s0_step2000.pt top3 [('L4H4', 0.424), ('L4H1', 0.128), ('L7H5', 0.071)] watch [('L4H4', 0.424), ('L5H6', 0.014)]
+KASOLO
+runs/KASOLO_s0_step2000.pt top3 [('L4H4', 0.426), ('L4H1', 0.202), ('L4H7', 0.064)] watch [('L4H4', 0.426), ('L5H6', 0.013)]

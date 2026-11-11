@@ -1,0 +1,36 @@
+K2CPREb
+runs/K2CPREb_s0_step800.pt top3 [('L3H2', 0.477), ('L4H0', 0.096), ('L3H1', 0.067)] watch [('L3H2', 0.477), ('L6H1', 0.009)]
+runs/K2CPREb_s0_step2400.pt top3 [('L3H2', 0.345), ('L4H0', 0.097), ('L4H4', 0.086)] watch [('L3H2', 0.345), ('L6H1', 0.021)]
+runs/K2CPREb_s0_step800.pt DLA [('L3H2', 45.696), ('L6H1', 22.535)] readout logp -2.306
+runs/K2CPREb_s0_step2400.pt DLA [('L3H2', 48.473), ('L6H1', 5.053)] readout logp -4.748
+K2CTLb
+runs/K2CTLb_s0_step800.pt top3 [('L3H2', 0.363), ('L6H6', 0.112), ('L4H5', 0.111)] watch [('L3H2', 0.363), ('L6H1', 0.033)]
+runs/K2CTLb_s0_step2400.pt top3 [('L3H2', 0.31), ('L5H2', 0.143), ('L4H6', 0.115)] watch [('L3H2', 0.31), ('L6H1', 0.06)]
+runs/K2CTLb_s0_step800.pt DLA [('L3H2', 7.798), ('L6H1', 7.984)] readout logp -3.138
+runs/K2CTLb_s0_step2400.pt DLA [('L3H2', 35.63), ('L6H1', 2.103)] readout logp -5.836
+K2UP3
+runs/K2UP3_s0_step800.pt top3 [('L3H2', 0.499), ('L3H5', 0.219), ('L4H5', 0.058)] watch [('L3H2', 0.499), ('L6H1', 0.019)]
+runs/K2UP3_s0_step2400.pt top3 [('L3H2', 0.335), ('L3H5', 0.208), ('L4H5', 0.073)] watch [('L3H2', 0.335), ('L6H1', 0.041)]
+runs/K2UP3_s0_step800.pt DLA [('L3H2', 113.479), ('L6H1', 34.424)] readout logp -4.419
+runs/K2UP3_s0_step2400.pt DLA [('L3H2', 83.565), ('L6H1', 4.637)] readout logp -4.557
+K2DN3
+runs/K2DN3_s0_step800.pt top3 [('L3H2', 0.417), ('L4H0', 0.1), ('L4H5', 0.067)] watch [('L3H2', 0.417), ('L6H1', 0.035)]
+runs/K2DN3_s0_step2400.pt top3 [('L3H2', 0.335), ('L4H0', 0.11), ('L5H4', 0.081)] watch [('L3H2', 0.335), ('L6H1', 0.032)]
+runs/K2DN3_s0_step800.pt DLA [('L3H2', 41.563), ('L6H1', 12.054)] readout logp -5.874
+runs/K2DN3_s0_step2400.pt DLA [('L3H2', 42.467), ('L6H1', 2.68)] readout logp -5.692
+K2RT3
+runs/K2RT3_s0_step800.pt top3 [('L3H2', 0.525), ('L4H3', 0.22), ('L4H6', 0.072)] watch [('L3H2', 0.525), ('L6H1', 0.013)]
+runs/K2RT3_s0_step2400.pt top3 [('L3H2', 0.346), ('L4H3', 0.141), ('L4H0', 0.07)] watch [('L3H2', 0.346), ('L6H1', 0.02)]
+runs/K2RT3_s0_step800.pt DLA [('L3H2', 39.841), ('L6H1', 13.969)] readout logp -2.094
+runs/K2RT3_s0_step2400.pt DLA [('L3H2', 41.05), ('L6H1', 3.61)] readout logp -4.846
+K2CTLUP3
+runs/K2CTLUP3_s0_step800.pt top3 [('L3H2', 0.394), ('L3H4', 0.2), ('L5H4', 0.189)] watch [('L3H2', 0.394), ('L6H1', 0.07)]
+runs/K2CTLUP3_s0_step2400.pt top3 [('L3H4', 0.305), ('L3H2', 0.287), ('L5H4', 0.186)] watch [('L3H2', 0.287), ('L6H1', 0.078)]
+runs/K2CTLUP3_s0_step800.pt DLA [('L3H2', 29.007), ('L6H1', 21.567)] readout logp -5.865
+runs/K2CTLUP3_s0_step2400.pt DLA [('L3H2', 34.336), ('L6H1', 5.077)] readout logp -5.886
+KAUP3
+runs/KAUP3_s0_step800.pt DLA [('L4H4', 109.194), ('L5H6', 19.687)] readout logp -4.471
+runs/KAUP3_s0_step2400.pt DLA [('L4H4', 90.856), ('L5H6', 2.116)] readout logp -4.252
+KADN3
+runs/KADN3_s0_step800.pt DLA [('L4H4', 37.932), ('L5H6', 11.243)] readout logp -5.675
+runs/KADN3_s0_step2400.pt DLA [('L4H4', 40.185), ('L5H6', 2.877)] readout logp -5.442

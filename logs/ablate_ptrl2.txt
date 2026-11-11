@@ -1,0 +1,1 @@
+PTRL2_s0 top induction [(2, 0, 0.232), (5, 0, 0.005), (7, 2, 0.004)] | copy gain intact 0.372  -top1 0.089  -top2 0.083  -top3 0.080

@@ -1,0 +1,8 @@
+XXXL_BASE_s0 seen 2.5345  new 5.5403  all 3.9227
+XXXL_COPY_s0 seen 2.9583  new 5.4865  all 4.1260
+XXXL_AUX1_s0 seen 2.5916  new 5.4848  all 3.9278
+XXXL_COPY_s0 full 3.8113  LM alone 4.1260 (seen 2.9583)  copy alone on seen 3.1546  mixture on seen 2.2769  seen frac 0.538
+XXXL_AUX1_s0 full 3.7866  LM alone 3.9278 (seen 2.5916)  copy alone on seen 3.1685  mixture on seen 2.2638  seen frac 0.538
+FINAL XXXL_AUX1 0 3.7668660247686025 6237s
+FINAL XXXL_BASE 0 3.905844851511903 6211s
+FINAL XXXL_COPY 0 3.792110741931966 6271s

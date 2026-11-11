@@ -1,0 +1,8 @@
+runs/K2CPREOWN_s0_step300.pt top3 [('L3H2', 0.557), ('L4H3', 0.057), ('L3H1', 0.056)] watch [('L3H2', 0.557), ('L6H1', 0.04)]
+runs/K2CPREOWN_s0_step800.pt top3 [('L3H2', 0.511), ('L5H3', 0.083), ('L6H5', 0.058)] watch [('L3H2', 0.511), ('L6H1', 0.01)]
+runs/K2CPREOWN_s0_step2400.pt top3 [('L3H2', 0.35), ('L5H3', 0.086), ('L6H2', 0.065)] watch [('L3H2', 0.35), ('L6H1', 0.019)]
+runs/KAPREOWN_s0_step300.pt top3 [('L4H4', 0.537), ('L4H6', 0.071), ('L4H1', 0.063)] watch [('L4H4', 0.537), ('L5H6', 0.025)]
+runs/KAPREOWN_s0_step800.pt top3 [('L4H4', 0.509), ('L4H6', 0.104), ('L4H7', 0.061)] watch [('L4H4', 0.509), ('L5H6', 0.007)]
+runs/KAPREOWN_s0_step2400.pt top3 [('L4H4', 0.34), ('L4H6', 0.104), ('L6H7', 0.065)] watch [('L4H4', 0.34), ('L5H6', 0.019)]
+FINAL K2CPREOWN 0 4.201141254335154 646s
+FINAL KAPREOWN 0 4.220667611380092 642s

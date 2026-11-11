@@ -1,0 +1,6 @@
+eps 1e-4 FINAL eps1e-4_s0 0.9977 0.9959 1.0
+eps 1e-4 FINAL eps1e-4_s1 0.6369 0.3447 1.0
+eps 1e-4 FINAL eps1e-4_s2 0.994 0.9892 1.0
+eps 1e-2 FINAL eps1e-2_s0 1.0 1.0 1.0
+eps 1e-2 FINAL eps1e-2_s1 1.0 1.0 1.0
+eps 1e-2 FINAL eps1e-2_s2 1.0 1.0 1.0

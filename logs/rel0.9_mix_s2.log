@@ -1,0 +1,19 @@
+[W1110 17:41:58.543148193 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 3179282432 bytes (free: 1579352064, total: 16608133120).
+rel0.9_mix_s2 0 8.7473 LM-alone answer acc 0.1988
+rel0.9_mix_s2 250 1.0168 LM-alone answer acc 0.2973
+rel0.9_mix_s2 500 1.0104 LM-alone answer acc 0.372
+rel0.9_mix_s2 750 0.9841 LM-alone answer acc 0.4453
+rel0.9_mix_s2 1000 0.9751 LM-alone answer acc 0.6287
+rel0.9_mix_s2 1250 0.9653 LM-alone answer acc 0.6974
+rel0.9_mix_s2 1500 0.9487 LM-alone answer acc 0.7711
+rel0.9_mix_s2 1750 0.9315 LM-alone answer acc 0.7569
+rel0.9_mix_s2 2000 0.9421 LM-alone answer acc 0.7926
+rel0.9_mix_s2 2250 0.9036 LM-alone answer acc 0.9873
+rel0.9_mix_s2 2500 0.8901 LM-alone answer acc 0.9996
+rel0.9_mix_s2 2750 0.8927 LM-alone answer acc 1.0
+rel0.9_mix_s2 3000 0.9172 LM-alone answer acc 0.9647
+rel0.9_mix_s2 3250 0.8898 LM-alone answer acc 0.9993
+rel0.9_mix_s2 3500 0.8912 LM-alone answer acc 0.9998
+rel0.9_mix_s2 3750 0.8882 LM-alone answer acc 1.0
+rel0.9_mix_s2 4000 1.1014 LM-alone answer acc 0.455
+FINAL rel0.9_mix_s2 0.455

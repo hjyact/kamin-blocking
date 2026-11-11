@@ -1,0 +1,15 @@
+copy pretraining done, loss 1.54
+fn_samebatch_s1 0 7.1199 closed-book recall 0.0105
+fn_samebatch_s1 125 4.5974 closed-book recall 0.016
+fn_samebatch_s1 250 4.5809 closed-book recall 0.0155
+fn_samebatch_s1 375 4.5967 closed-book recall 0.0155
+fn_samebatch_s1 500 4.5854 closed-book recall 0.0165
+fn_samebatch_s1 625 3.9865 closed-book recall 0.064
+fn_samebatch_s1 750 2.9092 closed-book recall 0.183
+fn_samebatch_s1 875 1.8641 closed-book recall 0.38
+fn_samebatch_s1 1000 1.0116 closed-book recall 0.65
+fn_samebatch_s1 1125 0.3597 closed-book recall 0.811
+fn_samebatch_s1 1250 0.147 closed-book recall 0.957
+fn_samebatch_s1 1375 0.0108 closed-book recall 0.9985
+fn_samebatch_s1 1500 0.0071 closed-book recall 0.9985
+FINAL fn_samebatch_s1 0.9985

@@ -1,0 +1,4 @@
+K2SCOPY
+runs/K2SCOPY_s0_step2000.pt top3 [('L3H2', 0.493), ('L5H3', 0.07), ('L5H7', 0.068)] watch [('L3H2', 0.493), ('L6H1', 0.051)]
+KASCOPY
+runs/KASCOPY_s0_step2000.pt top3 [('L4H4', 0.482), ('L4H7', 0.087), ('L4H2', 0.061)] watch [('L4H4', 0.482), ('L5H6', 0.003)]

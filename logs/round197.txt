@@ -1,0 +1,24 @@
+== seed 0
+after training alone         | A: NLL 1.377 p(true) 0.712 | B: NLL 1.375 p(true) 0.707
+after joint training (product) | A: NLL 1.741 p(true) 0.303 | B: NLL 1.769 p(true) 0.289
+m=1.0 own=False: LM alone p(true) covered 0.875 uncovered 0.713 | log-odds margin covered 4.69 uncovered 3.64
+m=2.0 own=False: LM alone p(true) covered 0.950 uncovered 0.715 | log-odds margin covered 5.69 uncovered 3.65
+m=3.0 own=False: LM alone p(true) covered 0.981 uncovered 0.715 | log-odds margin covered 6.70 uncovered 3.65
+kalman plus  LM log q_y  revalued -0.385 -> -1.979 (d -1.594)   control -0.390 -> -0.390 (d +0.000)
+plain LM: A-region 0.02 rest 0.39 | B: A-region 0.02 rest 0.40 | LM+B: A-region 0.03 rest 0.76 | LM+B+A: A-region 1.00 rest 0.76
+== seed 1
+after training alone         | A: NLL 1.376 p(true) 0.712 | B: NLL 1.375 p(true) 0.721
+after joint training (product) | A: NLL 1.776 p(true) 0.286 | B: NLL 1.759 p(true) 0.293
+m=1.0 own=False: LM alone p(true) covered 0.873 uncovered 0.723 | log-odds margin covered 4.68 uncovered 3.68
+m=2.0 own=False: LM alone p(true) covered 0.949 uncovered 0.723 | log-odds margin covered 5.68 uncovered 3.69
+m=3.0 own=False: LM alone p(true) covered 0.981 uncovered 0.724 | log-odds margin covered 6.69 uncovered 3.69
+kalman plus  LM log q_y  revalued -0.386 -> -1.982 (d -1.596)   control -0.389 -> -0.389 (d +0.000)
+plain LM: A-region 0.02 rest 0.29 | B: A-region 0.03 rest 0.43 | LM+B: A-region 0.04 rest 0.70 | LM+B+A: A-region 1.00 rest 0.70
+== seed 2
+after training alone         | A: NLL 1.375 p(true) 0.717 | B: NLL 1.376 p(true) 0.706
+after joint training (product) | A: NLL 1.744 p(true) 0.301 | B: NLL 1.766 p(true) 0.292
+m=1.0 own=False: LM alone p(true) covered 0.871 uncovered 0.714 | log-odds margin covered 4.66 uncovered 3.64
+m=2.0 own=False: LM alone p(true) covered 0.948 uncovered 0.715 | log-odds margin covered 5.66 uncovered 3.65
+m=3.0 own=False: LM alone p(true) covered 0.980 uncovered 0.715 | log-odds margin covered 6.67 uncovered 3.65
+kalman plus  LM log q_y  revalued -0.388 -> -1.988 (d -1.600)   control -0.387 -> -0.387 (d +0.000)
+plain LM: A-region 0.04 rest 0.37 | B: A-region 0.04 rest 0.36 | LM+B: A-region 0.06 rest 0.71 | LM+B+A: A-region 1.00 rest 0.71

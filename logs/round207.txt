@@ -1,0 +1,3 @@
+G0C0R0V0_s1 in-context non-target -11.859  absent -14.931  index 3.073  target -4.257
+POEONLY_s1 in-context non-target -11.402  absent -14.027  index 2.625  target -4.900
+POEFIX_s1 in-context non-target -11.801  absent -14.811  index 3.010  target -4.282

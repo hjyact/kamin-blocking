@@ -1,0 +1,11 @@
+[W1105 14:32:59.187598749 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 3179282432 bytes (free: 1544617984, total: 16608133120).
+part_fix_s2 0 20.4348 acc 0.2012 tool-covered 0.1887 uncovered 0.2167
+part_fix_s2 500 1.8647 acc 0.9355 tool-covered 0.8971 uncovered 0.9832
+part_fix_s2 1000 1.8009 acc 0.9842 tool-covered 0.9752 uncovered 0.9954
+part_fix_s2 1500 1.7848 acc 1.0 tool-covered 1.0 uncovered 1.0
+part_fix_s2 2000 1.7761 acc 1.0 tool-covered 1.0 uncovered 1.0
+part_fix_s2 2500 1.8872 acc 0.8982 tool-covered 0.8753 uncovered 0.9268
+part_fix_s2 3000 1.7793 acc 1.0 tool-covered 1.0 uncovered 1.0
+part_fix_s2 3500 1.7766 acc 1.0 tool-covered 1.0 uncovered 1.0
+part_fix_s2 4000 1.7772 acc 1.0 tool-covered 1.0 uncovered 1.0
+FINAL part_fix_s2 1.0 1.0 1.0

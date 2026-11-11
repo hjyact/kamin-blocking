@@ -1,0 +1,5 @@
+runs/KLI5D_s0_step300.pt top3 [('L4H0', 0.046), ('L7H2', 0.044), ('L6H2', 0.044)] watch [('L3H2', 0.024), ('L6H1', 0.022)]
+runs/KLI5D_s0_step800.pt top3 [('L6H1', 0.148), ('L5H3', 0.117), ('L7H2', 0.111)] watch [('L3H2', 0.068), ('L6H1', 0.148)]
+runs/KLI5D_s0_step2400.pt top3 [('L5H3', 0.271), ('L5H6', 0.227), ('L6H1', 0.2)] watch [('L3H2', 0.175), ('L6H1', 0.2)]
+runs/KLI5D_s0_step300.pt L3H2 offset attention 0.473
+FINAL KLI5D 0 4.2691169517939205 610s

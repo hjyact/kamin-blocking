@@ -1,0 +1,2 @@
+H2COPYF_s0 full 4.1045  LM alone 4.2759 (seen 2.7129)  copy alone on seen 3.0299  mixture on seen 2.2491  seen frac 0.470
+H2COPYEXPF_s0 full 4.1259  LM alone 4.2936 (seen 2.7215)  copy alone on seen 3.0506  mixture on seen 2.2647  seen frac 0.470

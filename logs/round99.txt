@@ -1,0 +1,8 @@
+0.02 FINAL drop0.02_s0 0.999 1.0
+0.05 FINAL drop0.05_s0 1.0 1.0
+0.1 FINAL drop0.1_s0 1.0 1.0
+0.25 FINAL drop0.25_s0 0.946 0.968
+0.02 FINAL drop0.02_s1 1.0 1.0
+0.05 FINAL drop0.05_s1 1.0 1.0
+0.1 FINAL drop0.1_s1 1.0 1.0
+0.25 FINAL drop0.25_s1 0.999 1.0

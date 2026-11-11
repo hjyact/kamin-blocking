@@ -1,0 +1,1 @@
+XL_PROJS_s0 {'full': 3.9177, 'lm_only': 4.2769}

@@ -1,0 +1,6 @@
+copy pretraining loss 0.002
+rag_pre_rag_s1 0 7.8075 closed-book recall A(with passage) 0.005 B(never) 0.008
+rag_pre_rag_s1 1000 0.002 closed-book recall A(with passage) 0.014 B(never) 0.995
+rag_pre_rag_s1 2000 0.0008 closed-book recall A(with passage) 0.018 B(never) 0.998
+rag_pre_rag_s1 3000 0.0016 closed-book recall A(with passage) 0.031 B(never) 1.0
+FINAL rag_pre_rag_s1 0.031 1.0

@@ -1,0 +1,6 @@
+CLKABV05 {"step": 3050, "loss": 3.8095335960388184, "t": 579.6076338291168, "ind": -0.8815107345581055, "cs": [2.4014, 4.6719], "hi": [0.1111, 0.0012], "cov": [0.0908, 0
+ORCH0.5 {"step": 3050, "loss": 3.869783878326416, "t": 578.2522358894348, "ind": -0.35234928131103516, "cs": [2.7455, 4.6967], "hi": [0.0331, 0.0008], "cov": [0.0908, 0
+runs/ABL44_s1_step1200.pt excl [(4, 4)]: best other 0.063 (L7H1), 2nd 0.055, 3rd 0.052, sum of others >0.05: 0.323
+runs/ABL44_s1_step1500.pt excl [(4, 4)]: best other 0.145 (L7H1), 2nd 0.107, 3rd 0.102, sum of others >0.05: 1.208
+runs/ABL44_s1_step1800.pt excl [(4, 4)]: best other 0.202 (L5H0), 2nd 0.179, 3rd 0.178, sum of others >0.05: 1.341
+runs/ABL44_s1_step3050.pt excl [(4, 4)]: best other 0.276 (L5H0), 2nd 0.200, 3rd 0.179, sum of others >0.05: 1.377

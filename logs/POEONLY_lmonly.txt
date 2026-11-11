@@ -1,0 +1,1 @@
+POEONLY_s0 {'full': 4.0874, 'lm_only': 4.7117}

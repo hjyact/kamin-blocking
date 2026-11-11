@@ -1,0 +1,1 @@
+LONGPROJ_s1 {'full': 3.7603, 'lm_only': 4.0675}

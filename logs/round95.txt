@@ -1,0 +1,9 @@
+FINAL pre_alone_s0 1.0 1.0 1.0
+FINAL pre_mix_s0 0.643 0.3557 1.0
+FINAL pre_fix_s0 1.0 0.9999 1.0
+FINAL pre_alone_s1 1.0 1.0 1.0
+FINAL pre_mix_s1 0.633 0.3378 1.0
+FINAL pre_fix_s1 1.0 1.0 1.0
+FINAL pre_alone_s2 1.0 1.0 1.0
+FINAL pre_mix_s2 0.6372 0.3452 1.0
+FINAL pre_fix_s2 1.0 1.0 1.0

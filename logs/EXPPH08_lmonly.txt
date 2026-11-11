@@ -1,0 +1,1 @@
+EXPPH08_s0 {'full': 4.27, 'lm_only': 4.27}

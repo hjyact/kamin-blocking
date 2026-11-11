@@ -1,0 +1,15 @@
+copy pretraining done, loss 1.54
+fn_relfirst_s1 0 1.1763 closed-book recall 0.0105
+fn_relfirst_s1 125 1.1504 closed-book recall 0.0225
+fn_relfirst_s1 250 1.0882 closed-book recall 0.101
+fn_relfirst_s1 375 0.7356 closed-book recall 0.7195
+fn_relfirst_s1 500 0.0092 closed-book recall 0.9995
+fn_relfirst_s1 625 0.0018 closed-book recall 1.0
+fn_relfirst_s1 750 0.0018 closed-book recall 1.0
+fn_relfirst_s1 875 0.0008 closed-book recall 1.0
+fn_relfirst_s1 1000 0.0007 closed-book recall 0.999
+fn_relfirst_s1 1125 0.0014 closed-book recall 1.0
+fn_relfirst_s1 1250 0.0007 closed-book recall 1.0
+fn_relfirst_s1 1375 0.0005 closed-book recall 1.0
+fn_relfirst_s1 1500 0.0014 closed-book recall 0.9995
+FINAL fn_relfirst_s1 0.9995

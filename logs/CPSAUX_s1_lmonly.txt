@@ -1,0 +1,1 @@
+CPSAUX_s1 {'full': 4.0405, 'lm_only': 4.2816}

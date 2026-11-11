@@ -1,0 +1,224 @@
+[W1105 23:54:44.595947134 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 3179282432 bytes (free: 1523712000, total: 16608133120).
+ews_s2 0 10.8337 acc 0.2017 tool-covered 0.1873 uncovered 0.2195
+ews_s2 100 1.4217 acc 0.3357 tool-covered 0.3504 uncovered 0.3174
+ews_s2 200 1.358 acc 0.3962 tool-covered 0.378 uncovered 0.4188
+ews_s2 300 1.2225 acc 0.5567 tool-covered 0.5776 uncovered 0.5308
+ews_s2 400 1.1583 acc 0.6718 tool-covered 0.6856 uncovered 0.6547
+ews_s2 500 1.1274 acc 0.7087 tool-covered 0.7039 uncovered 0.7146
+ews_s2 600 1.138 acc 0.5925 tool-covered 0.6632 uncovered 0.5045
+ews_s2 700 1.078 acc 0.7802 tool-covered 0.7925 uncovered 0.7649
+ews_s2 800 1.0525 acc 0.7973 tool-covered 0.8007 uncovered 0.7931
+ews_s2 900 0.9363 acc 0.9626 tool-covered 0.958 uncovered 0.9682
+ews_s2 1000 0.9107 acc 0.9891 tool-covered 0.9883 uncovered 0.99
+ews_s2 1100 0.9215 acc 0.9404 tool-covered 0.9452 uncovered 0.9344
+ews_s2 1200 0.9107 acc 0.9753 tool-covered 0.9589 uncovered 0.9958
+ews_s2 1300 0.8907 acc 0.9992 tool-covered 0.9992 uncovered 0.9993
+ews_s2 1400 0.8898 acc 0.9999 tool-covered 0.9998 uncovered 1.0
+ews_s2 1500 0.8925 acc 0.9999 tool-covered 0.9998 uncovered 1.0
+ews_s2 1600 0.8915 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 1700 0.9911 acc 0.8851 tool-covered 0.8404 uncovered 0.9406
+ews_s2 1800 0.8953 acc 0.9983 tool-covered 0.998 uncovered 0.9988
+ews_s2 1900 0.8913 acc 0.9994 tool-covered 0.9989 uncovered 1.0
+ews_s2 2000 0.955 acc 0.9645 tool-covered 0.9653 uncovered 0.9635
+ews_s2 2100 0.8906 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 2200 0.8885 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 2300 0.8904 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 2400 0.8902 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 2500 0.8887 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 2600 0.8887 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 2700 0.889 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 2800 0.8882 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 2900 0.8901 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 3000 0.8891 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 3100 0.8873 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 3200 0.8906 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 3300 1.2443 acc 0.554 tool-covered 0.5601 uncovered 0.5464
+ews_s2 3400 0.9152 acc 0.9807 tool-covered 0.9703 uncovered 0.9937
+ews_s2 3500 0.9463 acc 0.9578 tool-covered 0.9623 uncovered 0.9523
+ews_s2 3600 0.8893 acc 0.9995 tool-covered 0.9994 uncovered 0.9996
+ews_s2 3700 0.8871 acc 1.0 tool-covered 1.0 uncovered 1.0
+ews_s2 3800 0.8924 acc 1.0 tool-covered 0.9999 uncovered 1.0
+ews_s2 3900 0.8892 acc 1.0 tool-covered 1.0 uncovered 1.0
+GATE 4000 0.0474 0.9987
+ews_s2 4000 0.8888 acc 1.0 tool-covered 1.0 uncovered 1.0
+GATE 4050 0.4723 0.9987
+GATE 4100 0.8766 0.9988
+ews_s2 4100 0.8906 acc 1.0 tool-covered 1.0 uncovered 1.0
+GATE 4150 0.9756 0.9985
+GATE 4200 0.9872 0.9981
+ews_s2 4200 0.8899 acc 0.9999 tool-covered 0.9998 uncovered 1.0
+GATE 4250 0.9919 0.9981
+GATE 4300 0.9942 0.9984
+ews_s2 4300 0.8881 acc 0.9997 tool-covered 0.9995 uncovered 1.0
+GATE 4350 0.996 0.9963
+GATE 4400 0.9968 0.9951
+ews_s2 4400 0.8874 acc 0.9991 tool-covered 0.9984 uncovered 1.0
+GATE 4450 0.9975 0.9962
+GATE 4500 0.9979 0.9931
+ews_s2 4500 0.888 acc 0.9989 tool-covered 0.998 uncovered 1.0
+GATE 4550 0.9984 0.9871
+GATE 4600 0.9986 0.9929
+ews_s2 4600 0.8864 acc 0.9988 tool-covered 0.9979 uncovered 1.0
+GATE 4650 0.9989 0.9909
+GATE 4700 0.999 0.9942
+ews_s2 4700 0.887 acc 0.9972 tool-covered 0.995 uncovered 1.0
+GATE 4750 0.9992 0.9877
+GATE 4800 0.9993 0.9893
+ews_s2 4800 0.8883 acc 0.9969 tool-covered 0.9944 uncovered 1.0
+GATE 4850 0.9994 0.9829
+GATE 4900 0.9995 0.9821
+ews_s2 4900 0.8893 acc 0.9962 tool-covered 0.9931 uncovered 1.0
+GATE 4950 0.9996 0.9843
+GATE 5000 0.9996 0.9914
+ews_s2 5000 0.8898 acc 0.9961 tool-covered 0.993 uncovered 1.0
+GATE 5050 0.9996 0.9852
+GATE 5100 0.9997 0.9891
+ews_s2 5100 0.8877 acc 0.9952 tool-covered 0.9914 uncovered 1.0
+GATE 5150 0.9997 0.9849
+GATE 5200 0.9997 0.979
+ews_s2 5200 0.8875 acc 0.9932 tool-covered 0.9877 uncovered 1.0
+GATE 5250 0.9998 0.9701
+GATE 5300 0.9998 0.9782
+ews_s2 5300 0.8885 acc 0.9925 tool-covered 0.9865 uncovered 1.0
+GATE 5350 0.9998 0.9783
+GATE 5400 0.9998 0.9843
+ews_s2 5400 0.8898 acc 0.9908 tool-covered 0.9833 uncovered 1.0
+GATE 5450 0.9998 0.9717
+GATE 5500 0.9999 0.9772
+ews_s2 5500 0.8895 acc 0.9896 tool-covered 0.9813 uncovered 1.0
+GATE 5550 0.9999 0.9651
+GATE 5600 0.9999 0.9695
+ews_s2 5600 0.8875 acc 0.985 tool-covered 0.973 uncovered 1.0
+GATE 5650 0.9999 0.9752
+GATE 5700 0.9999 0.9752
+ews_s2 5700 0.8909 acc 0.9865 tool-covered 0.9756 uncovered 1.0
+GATE 5750 0.9999 0.9508
+GATE 5800 0.9999 0.9572
+ews_s2 5800 0.8881 acc 0.9802 tool-covered 0.9642 uncovered 1.0
+GATE 5850 0.9999 0.9538
+GATE 5900 0.9999 0.9636
+ews_s2 5900 0.8899 acc 0.9817 tool-covered 0.967 uncovered 1.0
+GATE 5950 0.9999 0.9523
+GATE 6000 0.9999 0.9688
+ews_s2 6000 0.8876 acc 0.984 tool-covered 0.9711 uncovered 1.0
+GATE 6050 0.9999 0.9692
+GATE 6100 0.9999 0.9599
+ews_s2 6100 0.8879 acc 0.9833 tool-covered 0.9698 uncovered 1.0
+GATE 6150 0.9999 0.9454
+GATE 6200 1.0 0.9457
+ews_s2 6200 0.8889 acc 0.9801 tool-covered 0.9641 uncovered 1.0
+GATE 6250 1.0 0.9534
+GATE 6300 1.0 0.9576
+ews_s2 6300 0.889 acc 0.9797 tool-covered 0.9633 uncovered 1.0
+GATE 6350 1.0 0.9394
+GATE 6400 1.0 0.9334
+ews_s2 6400 0.8872 acc 0.9685 tool-covered 0.9432 uncovered 1.0
+GATE 6450 1.0 0.9397
+GATE 6500 1.0 0.9336
+ews_s2 6500 0.8896 acc 0.9675 tool-covered 0.9413 uncovered 1.0
+GATE 6550 1.0 0.9343
+GATE 6600 1.0 0.9288
+ews_s2 6600 0.8887 acc 0.9694 tool-covered 0.9447 uncovered 1.0
+GATE 6650 1.0 0.9227
+GATE 6700 1.0 0.9161
+ews_s2 6700 0.8881 acc 0.9649 tool-covered 0.9367 uncovered 1.0
+GATE 6750 1.0 0.8915
+GATE 6800 1.0 0.9181
+ews_s2 6800 0.8887 acc 0.9588 tool-covered 0.9257 uncovered 1.0
+GATE 6850 1.0 0.9319
+GATE 6900 1.0 0.9002
+ews_s2 6900 0.8889 acc 0.9535 tool-covered 0.9161 uncovered 1.0
+GATE 6950 1.0 0.9136
+GATE 7000 1.0 0.9136
+ews_s2 7000 0.8887 acc 0.9552 tool-covered 0.9191 uncovered 1.0
+GATE 7050 1.0 0.9178
+GATE 7100 1.0 0.9218
+ews_s2 7100 0.8866 acc 0.9545 tool-covered 0.9179 uncovered 1.0
+GATE 7150 1.0 0.8889
+GATE 7200 1.0 0.9088
+ews_s2 7200 0.8881 acc 0.9515 tool-covered 0.9125 uncovered 1.0
+GATE 7250 1.0 0.8962
+GATE 7300 1.0 0.9138
+ews_s2 7300 0.8871 acc 0.9558 tool-covered 0.9202 uncovered 1.0
+GATE 7350 1.0 0.8909
+GATE 7400 1.0 0.9188
+ews_s2 7400 0.8888 acc 0.9533 tool-covered 0.9157 uncovered 1.0
+GATE 7450 1.0 0.9024
+GATE 7500 1.0 0.8986
+ews_s2 7500 0.8872 acc 0.9541 tool-covered 0.9171 uncovered 1.0
+GATE 7550 1.0 0.916
+GATE 7600 1.0 0.8981
+ews_s2 7600 0.8893 acc 0.9483 tool-covered 0.9068 uncovered 1.0
+GATE 7650 1.0 0.8879
+GATE 7700 1.0 0.9117
+ews_s2 7700 0.8881 acc 0.9484 tool-covered 0.9068 uncovered 1.0
+GATE 7750 1.0 0.8773
+GATE 7800 1.0 0.8958
+ews_s2 7800 0.8895 acc 0.9481 tool-covered 0.9063 uncovered 1.0
+GATE 7850 1.0 0.8806
+GATE 7900 1.0 0.8849
+ews_s2 7900 0.888 acc 0.9472 tool-covered 0.9047 uncovered 1.0
+GATE 7950 1.0 0.8793
+GATE 8000 1.0 0.8969
+ews_s2 8000 0.8875 acc 0.9451 tool-covered 0.901 uncovered 1.0
+GATE 8050 1.0 0.9024
+GATE 8100 1.0 0.8666
+ews_s2 8100 0.8892 acc 0.9463 tool-covered 0.9031 uncovered 1.0
+GATE 8150 1.0 0.8904
+GATE 8200 1.0 0.3793
+ews_s2 8200 2.2556 acc 0.3657 tool-covered 0.3464 uncovered 0.3896
+GATE 8250 1.0 0.387
+GATE 8300 1.0 0.4341
+ews_s2 8300 0.9891 acc 0.5363 tool-covered 0.4363 uncovered 0.6605
+GATE 8350 1.0 0.4081
+GATE 8400 1.0 0.3982
+ews_s2 8400 0.9266 acc 0.6375 tool-covered 0.37 uncovered 0.9698
+GATE 8450 1.0 0.4174
+GATE 8500 1.0 0.3959
+ews_s2 8500 0.9367 acc 0.6455 tool-covered 0.4103 uncovered 0.9378
+GATE 8550 1.0 0.3625
+GATE 8600 1.0 0.3575
+ews_s2 8600 0.8898 acc 0.6374 tool-covered 0.3457 uncovered 0.9999
+GATE 8650 1.0 0.3604
+GATE 8700 1.0 0.3524
+ews_s2 8700 0.9018 acc 0.6302 tool-covered 0.343 uncovered 0.9871
+GATE 8750 1.0 0.3514
+GATE 8800 1.0 0.3415
+ews_s2 8800 0.8906 acc 0.6347 tool-covered 0.3462 uncovered 0.9932
+GATE 8850 1.0 0.3503
+GATE 8900 1.0 0.3489
+ews_s2 8900 0.8888 acc 0.6355 tool-covered 0.3465 uncovered 0.9947
+GATE 8950 1.0 0.3487
+GATE 9000 1.0 0.3451
+ews_s2 9000 0.8893 acc 0.6358 tool-covered 0.3461 uncovered 0.9959
+GATE 9050 1.0 0.3513
+GATE 9100 1.0 0.3517
+ews_s2 9100 0.8896 acc 0.6367 tool-covered 0.3468 uncovered 0.9971
+GATE 9150 1.0 0.3452
+GATE 9200 1.0 0.3501
+ews_s2 9200 0.8894 acc 0.6376 tool-covered 0.3468 uncovered 0.999
+GATE 9250 1.0 0.3472
+GATE 9300 1.0 0.3519
+ews_s2 9300 0.8879 acc 0.6364 tool-covered 0.3454 uncovered 0.9979
+GATE 9350 1.0 0.3445
+GATE 9400 1.0 0.3453
+ews_s2 9400 0.8915 acc 0.6365 tool-covered 0.3442 uncovered 0.9998
+GATE 9450 1.0 0.3433
+GATE 9500 1.0 0.3419
+ews_s2 9500 0.8855 acc 0.637 tool-covered 0.3449 uncovered 1.0
+GATE 9550 1.0 0.3446
+GATE 9600 1.0 0.3438
+ews_s2 9600 0.889 acc 0.6367 tool-covered 0.3445 uncovered 1.0
+GATE 9650 1.0 0.3437
+GATE 9700 1.0 0.349
+ews_s2 9700 0.8888 acc 0.637 tool-covered 0.3448 uncovered 1.0
+GATE 9750 1.0 0.3433
+GATE 9800 1.0 0.3441
+ews_s2 9800 0.8889 acc 0.637 tool-covered 0.3448 uncovered 1.0
+GATE 9850 1.0 0.3439
+GATE 9900 1.0 0.3395
+ews_s2 9900 0.8901 acc 0.6363 tool-covered 0.3437 uncovered 1.0
+GATE 9950 1.0 0.3402
+GATE 10000 1.0 0.3487
+ews_s2 10000 0.8889 acc 0.6372 tool-covered 0.3452 uncovered 1.0
+FINAL ews_s2 0.6372 0.3452 1.0

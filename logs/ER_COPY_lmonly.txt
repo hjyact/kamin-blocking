@@ -1,0 +1,1 @@
+ER_COPY_s0 {'full': 3.8245, 'lm_only': 4.093}

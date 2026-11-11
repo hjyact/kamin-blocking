@@ -1,0 +1,4 @@
+runs/SPILL_s0_step300.pt L5H5 offset attention 0.482
+FINAL SPILL 0 4.275048692206868 594s
+runs/SPILLD_s0_step300.pt L5H5 offset attention 0.472
+FINAL SPILLD 0 4.246317279143412 595s

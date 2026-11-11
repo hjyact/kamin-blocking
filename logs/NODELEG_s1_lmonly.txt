@@ -1,0 +1,1 @@
+NODELEG_s1 {'full': 4.0261, 'lm_only': 4.189}

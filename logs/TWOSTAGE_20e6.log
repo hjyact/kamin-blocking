@@ -1,0 +1,9 @@
+INIT runs/EXPBASE_s0.pt missing 6 unexpected 0
+trainable ['cth', 'cmix', 'cq.weight', 'ck.weight', 'cg.weight', 'cg.bias']
+TWOSTAGE_20e6 params 76.9M steps 610
+{"step": 0, "loss": 4.110904693603516, "t": 6.117125749588013, "val": 4.232899097634143}
+{"step": 200, "loss": 4.188530445098877, "t": 24.962313652038574}
+{"step": 400, "loss": 4.3000688552856445, "t": 36.13248324394226}
+{"step": 600, "loss": 4.096573829650879, "t": 47.30420517921448}
+{"step": 609, "loss": 4.2177839279174805, "t": 47.80748677253723, "val": 4.17001412784467}
+FINAL TWOSTAGE_20e6 0 4.17001412784467 54s

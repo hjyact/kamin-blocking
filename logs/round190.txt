@@ -1,0 +1,32 @@
+KSCTL
+runs/KSCTL_s0_step300.pt top3 [('L2H6', 0.42), ('L2H7', 0.396), ('L5H7', 0.303)] watch [('L3H6', 0.053), ('L6H5', 0.025)]
+runs/KSCTL_s0_step800.pt top3 [('L3H6', 0.636), ('L2H7', 0.435), ('L2H6', 0.392)] watch [('L3H6', 0.636), ('L6H5', 0.01)]
+runs/KSCTL_s0_step2400.pt top3 [('L3H6', 0.379), ('L2H7', 0.372), ('L2H6', 0.286)] watch [('L3H6', 0.379), ('L6H5', 0.018)]
+runs/KSCTL_s0_step300.pt DLA [('L3H6', 2.866), ('L6H5', 6.162)] readout logp -10.56
+runs/KSCTL_s0_step800.pt DLA [('L3H6', 9.693), ('L6H5', 9.053)] readout logp -1.994
+runs/KSCTL_s0_step2400.pt DLA [('L3H6', 13.584), ('L6H5', 2.156)] readout logp -5.351
+FINAL KSCTL 0 4.201124397946185 647s
+KS50
+runs/KS50_s0_step300.pt top3 [('L3H6', 0.455), ('L5H5', 0.322), ('L5H4', 0.154)] watch [('L3H6', 0.455), ('L6H5', 0.027)]
+runs/KS50_s0_step800.pt top3 [('L3H6', 0.564), ('L5H5', 0.306), ('L5H4', 0.234)] watch [('L3H6', 0.564), ('L6H5', 0.011)]
+runs/KS50_s0_step2400.pt top3 [('L3H6', 0.362), ('L5H5', 0.237), ('L5H4', 0.229)] watch [('L3H6', 0.362), ('L6H5', 0.018)]
+runs/KS50_s0_step300.pt DLA [('L3H6', 43.914), ('L6H5', 1.864)] readout logp -7.466
+runs/KS50_s0_step800.pt DLA [('L3H6', 34.376), ('L6H5', 15.788)] readout logp -2.03
+runs/KS50_s0_step2400.pt DLA [('L3H6', 30.545), ('L6H5', 5.841)] readout logp -4.837
+FINAL KS50 0 4.172158289639676 640s
+KS100
+runs/KS100_s0_step300.pt top3 [('L3H6', 0.47), ('L4H7', 0.202), ('L6H7', 0.146)] watch [('L3H6', 0.47), ('L6H5', 0.021)]
+runs/KS100_s0_step800.pt top3 [('L3H6', 0.543), ('L4H7', 0.321), ('L4H5', 0.192)] watch [('L3H6', 0.543), ('L6H5', 0.012)]
+runs/KS100_s0_step2400.pt top3 [('L3H6', 0.353), ('L4H7', 0.306), ('L7H7', 0.189)] watch [('L3H6', 0.353), ('L6H5', 0.017)]
+runs/KS100_s0_step300.pt DLA [('L3H6', 45.396), ('L6H5', 4.52)] readout logp -7.525
+runs/KS100_s0_step800.pt DLA [('L3H6', 40.191), ('L6H5', 14.29)] readout logp -1.994
+runs/KS100_s0_step2400.pt DLA [('L3H6', 30.095), ('L6H5', 3.826)] readout logp -4.846
+FINAL KS100 0 4.1752787828445435 631s
+KS300
+runs/KS300_s0_step300.pt top3 [('L3H6', 0.771), ('L5H5', 0.27), ('L5H4', 0.202)] watch [('L3H6', 0.771), ('L6H5', 0.025)]
+runs/KS300_s0_step800.pt top3 [('L3H6', 0.576), ('L5H5', 0.283), ('L5H4', 0.246)] watch [('L3H6', 0.576), ('L6H5', 0.012)]
+runs/KS300_s0_step2400.pt top3 [('L3H6', 0.363), ('L5H4', 0.245), ('L5H5', 0.23)] watch [('L3H6', 0.363), ('L6H5', 0.019)]
+runs/KS300_s0_step300.pt DLA [('L3H6', 33.037), ('L6H5', 2.374)] readout logp -6.183
+runs/KS300_s0_step800.pt DLA [('L3H6', 35.314), ('L6H5', 17.028)] readout logp -1.942
+runs/KS300_s0_step2400.pt DLA [('L3H6', 28.909), ('L6H5', 6.34)] readout logp -4.559
+FINAL KS300 0 4.171115310954266 631s

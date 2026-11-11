@@ -1,0 +1,10 @@
+rl_cf_c0.2_s0 0 LM-alone acc 0.2996 P(call) 0.4489 reward 0.1318
+rl_cf_c0.2_s0 500 LM-alone acc 0.4597 P(call) 0.6412 reward 0.8471
+rl_cf_c0.2_s0 1000 LM-alone acc 0.4764 P(call) 0.6247 reward 0.872
+rl_cf_c0.2_s0 1500 LM-alone acc 0.5464 P(call) 0.5746 reward 0.8802
+rl_cf_c0.2_s0 2000 LM-alone acc 0.5788 P(call) 0.5834 reward 0.8786
+rl_cf_c0.2_s0 2500 LM-alone acc 0.6119 P(call) 0.5339 reward 0.8794
+rl_cf_c0.2_s0 3000 LM-alone acc 0.7433 P(call) 0.4145 reward 0.9105
+rl_cf_c0.2_s0 3500 LM-alone acc 0.75 P(call) 0.3824 reward 0.9161
+rl_cf_c0.2_s0 4000 LM-alone acc 0.8073 P(call) 0.3456 reward 0.9238
+rl_cf_c0.2_s0 4500 LM-alone acc 0.8733 P(call) 0.2037 reward 0.946

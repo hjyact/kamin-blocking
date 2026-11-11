@@ -1,0 +1,5 @@
+K2PREWD0
+runs/K2PREWD0_s0_step800.pt top3 [('L3H2', 0.495), ('L4H4', 0.107), ('L3H4', 0.068)] watch [('L3H2', 0.495), ('L6H1', 0.036)]
+runs/K2PREWD0_s0_step3050.pt top3 [('L3H2', 0.345), ('L4H4', 0.127), ('L5H2', 0.075)] watch [('L3H2', 0.345), ('L6H1', 0.056)]
+K2CTLWD0
+runs/K2CTLWD0_s0_step800.pt top3 [('L3H2', 0.269), ('L5H3', 0.135), ('L7H5', 0.107)] watch [('L3H2', 0.269), ('L6H1', 0.104)]

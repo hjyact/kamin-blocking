@@ -1,0 +1,4 @@
+PTRL0.2_s0 best prev-token head 0.479 layer 5 | best induction head 0.168 layer 7 | heads with prev>0.5: 0 induction>0.3: 0 LM-head copy gain 0.544
+  per-layer max prev [0.01, 0.19, 0.4, 0.35, 0.4, 0.48, 0.23, 0.04] max ind [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.17]
+PTRL0.8_s0 best prev-token head 0.461 layer 6 | best induction head 0.107 layer 7 | heads with prev>0.5: 0 induction>0.3: 0 LM-head copy gain 0.252
+  per-layer max prev [0.01, 0.16, 0.29, 0.36, 0.38, 0.35, 0.46, 0.04] max ind [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.11]

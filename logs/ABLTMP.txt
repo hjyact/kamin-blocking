@@ -1,0 +1,7 @@
+runs/ABLTMP_s0_step1200.pt top3 [('L4H4', 0.352), ('L4H1', 0.109), ('L4H6', 0.076)] watch [('L4H4', 0.352), ('L4H5', 0.056)]
+runs/ABLTMP_s0_step1800.pt top3 [('L4H1', 0.288), ('L4H4', 0.275), ('L4H7', 0.255)] watch [('L4H4', 0.275), ('L4H5', 0.09)]
+runs/ABLTMP_s0_step2400.pt top3 [('L4H4', 0.312), ('L4H1', 0.288), ('L4H7', 0.256)] watch [('L4H4', 0.312), ('L4H5', 0.092)]
+runs/ABLTMP_s0_step3050.pt top3 [('L4H4', 0.307), ('L4H1', 0.283), ('L4H7', 0.25)] watch [('L4H4', 0.307), ('L4H5', 0.091)]
+runs/ABLTMP_s0_step1800.pt excl [(4, 4)]: best other 0.288 (L4H1), 2nd 0.255, 3rd 0.207, sum of others >0.05: 1.324
+runs/ABLTMP_s0_step3050.pt excl [(4, 4)]: best other 0.283 (L4H1), 2nd 0.250, 3rd 0.199, sum of others >0.05: 1.424
+FINAL ABLTMP 0 4.230371093652288 589s

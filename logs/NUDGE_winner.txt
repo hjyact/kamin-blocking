@@ -1,0 +1,8 @@
+runs/NUDGE44_s0_step300.pt top3 [('L4H4', 0.588), ('L4H6', 0.057), ('L4H3', 0.056)] watch [('L4H4', 0.588)]
+runs/NUDGE44_s0_step1200.pt top3 [('L4H4', 0.361), ('L4H1', 0.109), ('L4H7', 0.06)] watch [('L4H4', 0.361)]
+runs/NUDGE44_s0_step2400.pt top3 [('L4H4', 0.317), ('L4H1', 0.142), ('L4H7', 0.065)] watch [('L4H4', 0.317)]
+FINAL NUDGE44 0 4.230608637215661 584s
+runs/NUDGE03_s0_step300.pt top3 [('L0H3', 0.207), ('L7H5', 0.065), ('L7H0', 0.043)] watch [('L0H3', 0.207)]
+runs/NUDGE03_s0_step1200.pt top3 [('L7H5', 0.208), ('L7H0', 0.188), ('L7H7', 0.107)] watch [('L0H3', 0.059)]
+runs/NUDGE03_s0_step2400.pt top3 [('L7H0', 0.267), ('L7H5', 0.223), ('L7H3', 0.137)] watch [('L0H3', 0.051)]
+FINAL NUDGE03 0 4.261489699121381 591s

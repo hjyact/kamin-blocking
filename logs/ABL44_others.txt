@@ -1,0 +1,8 @@
+runs/ABL44_s0_step1200.pt excl [(4, 4)]: best other 0.079 (L4H5), 2nd 0.066, 3rd 0.065, sum of others >0.05: 0.555
+runs/ABL44_s0_step1350.pt excl [(4, 4)]: best other 0.165 (L4H5), 2nd 0.090, 3rd 0.089, sum of others >0.05: 1.178
+runs/ABL44_s0_step1500.pt excl [(4, 4)]: best other 0.293 (L4H5), 2nd 0.098, 3rd 0.087, sum of others >0.05: 1.349
+runs/ABL44_s0_step1800.pt excl [(4, 4)]: best other 0.336 (L4H5), 2nd 0.102, 3rd 0.089, sum of others >0.05: 1.392
+runs/ABL44_s0_step2100.pt excl [(4, 4)]: best other 0.322 (L4H5), 2nd 0.101, 3rd 0.090, sum of others >0.05: 1.379
+runs/ABL44_s0_step2400.pt excl [(4, 4)]: best other 0.323 (L4H5), 2nd 0.103, 3rd 0.093, sum of others >0.05: 1.395
+runs/ABL44_s0_step3050.pt excl [(4, 4)]: best other 0.319 (L4H5), 2nd 0.101, 3rd 0.090, sum of others >0.05: 1.437
+FINAL ABL44 0 4.237479520625755 596s

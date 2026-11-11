@@ -1,0 +1,3 @@
+ER_PLAIN_s1 {'full': {'seen': 2.5832, 'new': 5.5581}, 'lm': {'seen': 2.5832, 'new': 5.5581}}
+ER_COPY_s1 {'full': {'seen': 2.2896, 'new': 5.5895}, 'lm': {'seen': 2.8701, 'new': 5.4834}}
+ER_FIX_s1 {'full': {'seen': 2.2996, 'new': 5.6036}, 'lm': {'seen': 2.6309, 'new': 5.5174}}

@@ -1,0 +1,6 @@
+copy pretraining loss 0.002
+drop0.1_s1 0 8.4102 closed-book recall A(with passage) 0.006 B(never) 0.01
+drop0.1_s1 1000 0.0029 closed-book recall A(with passage) 0.983 B(never) 0.998
+drop0.1_s1 2000 0.0358 closed-book recall A(with passage) 0.875 B(never) 0.977
+drop0.1_s1 3000 0.0004 closed-book recall A(with passage) 1.0 B(never) 1.0
+FINAL drop0.1_s1 1.0 1.0

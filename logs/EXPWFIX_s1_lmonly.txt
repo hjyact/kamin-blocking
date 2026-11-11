@@ -1,0 +1,1 @@
+EXPWFIX_s1 {'full': 4.2759, 'lm_only': 4.2759}
