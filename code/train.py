@@ -13,7 +13,7 @@ import numpy as np, torch, torch.nn as nn, torch.nn.functional as F
 SPL = [None]   # --splitadam: per-position mixture log-likelihood and seen mask of the last forward
 CPLOG = [None]   # analysis: (log c_y, seen) of the copy head per position, when a list
 ABL_ON = [False]   # --ablate "L,H,from": zero that head's output from step `from` on
-OREAD_O = [[]]; OREAD_ACT = [[]]; SOLO_ACT = [[]]; SOLO_MASK = [None]   # --oread w: shared-error readout of the summed outputs of the active heads (--oread_spec "L,H,from,until;..."), CE on copyable positions
+OREAD_O = [[]]; OREAD_ACT = [[]]; SOLO_ACT = [[]]; SOLO_MASK = [None]; SOFT_OFF = [False]; WIN = [0]; ATT_MASK = [None]   # ATT_MASK: (B,1,T,T) attention mask from --facts packm units, else None | WIN: --win w applied to the current batch (banded causal attention) | --oread w: shared-error readout of the summed outputs of the active heads (--oread_spec "L,H,from,until;..."), CE on copyable positions
 NUDGE_P = [[]]; NUDGE_ON = [False]; NUDGE_ACT = [[]]   # --nudge w: early auxiliary loss pulling one head (--nudge_lh L,H) toward induction attention, for steps < --nudge_until
 FREQTOP = [None]   # --falsemask 7: ids of the most frequent training tokens
 AUTO = [False]   # --autodeleg theta: delegation switches on (for good) once the LM's best induction head exceeds theta, checked every 50 steps
@@ -36,7 +36,7 @@ ap.add_argument("--salience", action="store_true"); ap.add_argument("--momentum"
 ap.add_argument("--surpfeat", action="store_true"); ap.add_argument("--induct", action="store_true")
 ap.add_argument("--lexmatch", action="store_true"); ap.add_argument("--lex5", action="store_true"); ap.add_argument("--softmatch", action="store_true")
 ap.add_argument("--succ", action="store_true"); ap.add_argument("--segbias", action="store_true"); ap.add_argument("--countsal", action="store_true"); ap.add_argument("--pairaff", action="store_true"); ap.add_argument("--ngramhead", action="store_true"); ap.add_argument("--ng3", action="store_true"); ap.add_argument("--ngrec", action="store_true"); ap.add_argument("--keyshift", action="store_true"); ap.add_argument("--ngrep", action="store_true"); ap.add_argument("--ngsel", action="store_true"); ap.add_argument("--ngback", action="store_true"); ap.add_argument("--depthemb", action="store_true"); ap.add_argument("--cachelm", action="store_true"); ap.add_argument("--cache2", action="store_true"); ap.add_argument("--cachesoft", action="store_true"); ap.add_argument("--cacheproj", action="store_true"); ap.add_argument("--cachefast", action="store_true"); ap.add_argument("--cachebf", action="store_true"); ap.add_argument("--cacheflash", action="store_true"); ap.add_argument("--cheads", type=int, default=4); ap.add_argument("--ckeylayer", type=int, default=-1); ap.add_argument("--crank", type=int, default=64)   # ckeylayer: cache keys/queries from this block (-1 = final)   # exact cache loss with flash logsumexp + sparse target matches   # cache similarity matmuls in bf16 (softmax in fp32)   # loss path: only p_cache(target), no BxTxV tensor   # with --cachesoft: 4 learned low-rank similarity heads instead of raw cosine   # with --cachelm: weights from hidden-state similarity (continuous cache) instead of exact token match   # add a 2-gram-context cache with its own gate   # output-side in-context bigram cache mixed with a learned per-token gate   # bracket nesting depth (before the token) as an input embedding   # with --ngsel: head0 = back-off 3->2->1-gram matches, head1 = 1-gram   # heads 0,1 become 1-gram / 2-gram match heads (no new params): uniform (ngrep) or content-selected (ngsel)   # half the heads take keys from the previous token (one-layer induction, no extra params)   # Akyurek+24-style hard n-gram heads (n=1,2), uniform over matches   # successor-value attention: match key j, read value j+1 (strictly causal)   # per-head biases for same-token, previous-token (induction) and 2-gram matches
-ap.add_argument("--init", default=""); ap.add_argument("--pricelog", action="store_true"); ap.add_argument("--train_file", default="train.bin"); ap.add_argument("--freeze_base", action="store_true"); ap.add_argument("--hdrop", type=float, default=0.0); ap.add_argument("--eval_tokens", type=float, default=4e6); ap.add_argument("--nosave", action="store_true"); ap.add_argument("--lmaux", type=float, default=0.0); ap.add_argument("--cgfeat", action="store_true"); ap.add_argument("--hints", action="store_true"); ap.add_argument("--copyrun", action="store_true"); ap.add_argument("--psguide", action="store_true"); ap.add_argument("--readmix", action="store_true"); ap.add_argument("--hintdist", action="store_true"); ap.add_argument("--recur", action="store_true"); ap.add_argument("--cachepoe", action="store_true"); ap.add_argument("--poefast", action="store_true"); ap.add_argument("--poeonly", action="store_true"); ap.add_argument("--recurgate", action="store_true"); ap.add_argument("--hint34", action="store_true"); ap.add_argument("--hinterr", action="store_true"); ap.add_argument("--cread", action="store_true"); ap.add_argument("--creadmid", type=int, default=-1); ap.add_argument("--midctl", action="store_true"); ap.add_argument("--creadctl", action="store_true"); ap.add_argument("--hind", action="store_true"); ap.add_argument("--dval", action="store_true"); ap.add_argument("--cstopgrad", action="store_true"); ap.add_argument("--nodeleg", action="store_true"); ap.add_argument("--vthink", type=int, default=-1); ap.add_argument("--vuntied", action="store_true"); ap.add_argument("--revise", action="store_true"); ap.add_argument("--revisectl", action="store_true"); ap.add_argument("--novroute", action="store_true"); ap.add_argument("--hashroute", action="store_true"); ap.add_argument("--semhead", action="store_true"); ap.add_argument("--mos2", action="store_true"); ap.add_argument("--maxmix", action="store_true"); ap.add_argument("--cpstyle", action="store_true"); ap.add_argument("--revise2", action="store_true"); ap.add_argument("--linattn", action="store_true"); ap.add_argument("--linrev", action="store_true"); ap.add_argument("--linrevctl", action="store_true"); ap.add_argument("--expert", default=""); ap.add_argument("--deleg_at", type=float, default=-1.0); ap.add_argument("--mosk", type=int, default=0); ap.add_argument("--attnfloor", type=float, default=0.0); ap.add_argument("--oracle", type=float, default=-1.0); ap.add_argument("--attnptr", action="store_true"); ap.add_argument("--ptr_until", type=float, default=1.0); ap.add_argument("--ptraux", type=float, default=0.0); ap.add_argument("--ptrrc", action="store_true"); ap.add_argument("--gatedetach", action="store_true"); ap.add_argument("--cpaux", type=float, default=0.0); ap.add_argument("--ptrlam", type=float, default=-1.0); ap.add_argument("--maskseen", action="store_true"); ap.add_argument("--newweight", type=float, default=0.0); ap.add_argument("--splitadam", action="store_true"); ap.add_argument("--ptrlayer", type=int, default=-1); ap.add_argument("--indweight", type=float, default=0.0); ap.add_argument("--splitrand", action="store_true"); ap.add_argument("--oeps", type=float, default=1e-2); ap.add_argument("--orc_from", type=int, default=0); ap.add_argument("--orc_until", type=int, default=10**9); ap.add_argument("--orc_windows", default=""); ap.add_argument("--falsemask", type=int, default=0); ap.add_argument("--deleg_from", type=int, default=0); ap.add_argument("--autodeleg", type=float, default=0.0); ap.add_argument("--save_at", default=""); ap.add_argument("--nullslot", action="store_true"); ap.add_argument("--dropfrac", type=float, default=0.0); ap.add_argument("--nudge", type=float, default=0.0); ap.add_argument("--nudge_lh", default="4,4"); ap.add_argument("--nudge_until", type=int, default=300); ap.add_argument("--nudge_spec", default=""); ap.add_argument("--oread", type=float, default=0.0); ap.add_argument("--oread_spec", default=""); ap.add_argument("--ablate", default=""); ap.add_argument("--nudge_prev", action="store_true"); ap.add_argument("--nudge_off", type=int, default=1); ap.add_argument("--nudge_detach", action="store_true"); ap.add_argument("--oread_own", type=float, default=0.0); ap.add_argument("--oread_T", type=float, default=1.0); ap.add_argument("--gate_p", type=int, default=0); ap.add_argument("--gate_g0", default="0.1,0.05"); ap.add_argument("--gate_lr", type=float, default=0.1); ap.add_argument("--gate_adam", action="store_true"); ap.add_argument("--gate_cfg", default=""); ap.add_argument("--gate_same", action="store_true"); ap.add_argument("--solo_spec", default=""); ap.add_argument("--solo_copy", action="store_true"); ap.add_argument("--oread_rate", type=float, default=1.0); ap.add_argument("--out", default="./runs")
+ap.add_argument("--init", default=""); ap.add_argument("--pricelog", action="store_true"); ap.add_argument("--train_file", default="train.bin"); ap.add_argument("--freeze_base", action="store_true"); ap.add_argument("--hdrop", type=float, default=0.0); ap.add_argument("--eval_tokens", type=float, default=4e6); ap.add_argument("--nosave", action="store_true"); ap.add_argument("--lmaux", type=float, default=0.0); ap.add_argument("--cgfeat", action="store_true"); ap.add_argument("--hints", action="store_true"); ap.add_argument("--copyrun", action="store_true"); ap.add_argument("--psguide", action="store_true"); ap.add_argument("--readmix", action="store_true"); ap.add_argument("--hintdist", action="store_true"); ap.add_argument("--recur", action="store_true"); ap.add_argument("--cachepoe", action="store_true"); ap.add_argument("--poefast", action="store_true"); ap.add_argument("--poeonly", action="store_true"); ap.add_argument("--recurgate", action="store_true"); ap.add_argument("--hint34", action="store_true"); ap.add_argument("--hinterr", action="store_true"); ap.add_argument("--cread", action="store_true"); ap.add_argument("--creadmid", type=int, default=-1); ap.add_argument("--midctl", action="store_true"); ap.add_argument("--creadctl", action="store_true"); ap.add_argument("--hind", action="store_true"); ap.add_argument("--dval", action="store_true"); ap.add_argument("--cstopgrad", action="store_true"); ap.add_argument("--nodeleg", action="store_true"); ap.add_argument("--vthink", type=int, default=-1); ap.add_argument("--vuntied", action="store_true"); ap.add_argument("--revise", action="store_true"); ap.add_argument("--revisectl", action="store_true"); ap.add_argument("--novroute", action="store_true"); ap.add_argument("--hashroute", action="store_true"); ap.add_argument("--semhead", action="store_true"); ap.add_argument("--mos2", action="store_true"); ap.add_argument("--maxmix", action="store_true"); ap.add_argument("--cpstyle", action="store_true"); ap.add_argument("--revise2", action="store_true"); ap.add_argument("--linattn", action="store_true"); ap.add_argument("--linrev", action="store_true"); ap.add_argument("--linrevctl", action="store_true"); ap.add_argument("--expert", default=""); ap.add_argument("--deleg_at", type=float, default=-1.0); ap.add_argument("--mosk", type=int, default=0); ap.add_argument("--attnfloor", type=float, default=0.0); ap.add_argument("--oracle", type=float, default=-1.0); ap.add_argument("--attnptr", action="store_true"); ap.add_argument("--ptr_until", type=float, default=1.0); ap.add_argument("--ptraux", type=float, default=0.0); ap.add_argument("--ptrrc", action="store_true"); ap.add_argument("--gatedetach", action="store_true"); ap.add_argument("--cpaux", type=float, default=0.0); ap.add_argument("--ptrlam", type=float, default=-1.0); ap.add_argument("--maskseen", action="store_true"); ap.add_argument("--newweight", type=float, default=0.0); ap.add_argument("--splitadam", action="store_true"); ap.add_argument("--ptrlayer", type=int, default=-1); ap.add_argument("--indweight", type=float, default=0.0); ap.add_argument("--splitrand", action="store_true"); ap.add_argument("--oeps", type=float, default=1e-2); ap.add_argument("--orc_from", type=int, default=0); ap.add_argument("--orc_until", type=int, default=10**9); ap.add_argument("--orc_windows", default=""); ap.add_argument("--falsemask", type=int, default=0); ap.add_argument("--deleg_from", type=int, default=0); ap.add_argument("--autodeleg", type=float, default=0.0); ap.add_argument("--save_at", default=""); ap.add_argument("--nullslot", action="store_true"); ap.add_argument("--dropfrac", type=float, default=0.0); ap.add_argument("--nudge", type=float, default=0.0); ap.add_argument("--nudge_lh", default="4,4"); ap.add_argument("--nudge_until", type=int, default=300); ap.add_argument("--nudge_spec", default=""); ap.add_argument("--oread", type=float, default=0.0); ap.add_argument("--oread_spec", default=""); ap.add_argument("--ablate", default=""); ap.add_argument("--nudge_prev", action="store_true"); ap.add_argument("--nudge_off", type=int, default=1); ap.add_argument("--nudge_detach", action="store_true"); ap.add_argument("--oread_own", type=float, default=0.0); ap.add_argument("--oread_T", type=float, default=1.0); ap.add_argument("--gate_p", type=int, default=0); ap.add_argument("--gate_g0", default="0.1,0.05"); ap.add_argument("--gate_lr", type=float, default=0.1); ap.add_argument("--gate_adam", action="store_true"); ap.add_argument("--gate_cfg", default=""); ap.add_argument("--gate_same", action="store_true"); ap.add_argument("--solo_spec", default=""); ap.add_argument("--solo_copy", action="store_true"); ap.add_argument("--muon", type=float, default=0.0); ap.add_argument("--soft_layers", default=""); ap.add_argument("--soft_drop", type=float, default=0.0); ap.add_argument("--soft_off", action="store_true"); ap.add_argument("--mdlm", action="store_true"); ap.add_argument("--tmin", type=float, default=0.05); ap.add_argument("--tmax", type=float, default=1.0); ap.add_argument("--facts", default=""); ap.add_argument("--win", type=int, default=8); ap.add_argument("--winp", type=float, default=0.0); ap.add_argument("--oread_rate", type=float, default=1.0); ap.add_argument("--out", default="./runs")
 A = ap.parse_args()
 torch.manual_seed(A.seed); np.random.seed(A.seed)
 dev = "cuda"; torch.backends.cuda.matmul.allow_tf32 = True; torch.backends.cudnn.allow_tf32 = True
@@ -134,7 +134,7 @@ class Attn(nn.Module):
             _sc = (qt.float() @ kt.float().transpose(-1, -2)) / s.hd ** 0.5; _T = _sc.size(-1); _sc = _sc.masked_fill(~torch.tril(torch.ones(_T, _T, device=x.device, dtype=torch.bool)), float('-inf'))
             if A.nullslot: _n = (qt.float() @ s.kn0.float().view(1, s.h, s.hd, 1)) / s.hd ** 0.5; ATTN[0].append(torch.cat([_n, _sc], -1).softmax(-1)[..., 1:].cpu())
             else: ATTN[0].append(_sc.softmax(-1).cpu())
-        if A.linattn:   # causal linear attention (feature map elu+1), parallel masked form; optional hindsight value revision in the same kernel space
+        if A.linattn and str(s.li) not in A.soft_layers.split(','):   # causal linear attention (feature map elu+1), parallel masked form; optional hindsight value revision in the same kernel space
             fq, fk = F.elu(qt.float()) + 1, F.elu(kt.float()) + 1; Tn = fq.size(2)
             tri = torch.tril(torch.ones(Tn, Tn, device=x.device)); S = (fq @ fk.transpose(-1, -2)) * tri
             y = ((S @ vt.float()) / S.sum(-1, keepdim=True).clamp(min=1e-6)).to(vt.dtype)
@@ -151,7 +151,9 @@ class Attn(nn.Module):
             _T = kt.size(2); kc = torch.cat([s.kn0.to(kt.dtype).view(1, s.h, 1, s.hd).expand(B, -1, 1, -1), kt], 2); vc = torch.cat([torch.zeros_like(vt[:, :, :1]), vt], 2)
             y = F.scaled_dot_product_attention(qt, kc, vc, attn_mask=torch.ones(_T, _T + 1, device=x.device, dtype=torch.bool).tril(1))
         else:
-            y = F.scaled_dot_product_attention(qt, kt, vt, is_causal=True)
+            if ATT_MASK[0] is not None and ATT_MASK[0].shape[0] == qt.size(0) and ATT_MASK[0].shape[-1] == kt.size(2): y = F.scaled_dot_product_attention(qt, kt, vt, attn_mask=ATT_MASK[0])   # packm: the second fact document cannot see the first
+            elif WIN[0]: _T = kt.size(2); _i = torch.arange(_T, device=x.device); y = F.scaled_dot_product_attention(qt, kt, vt, attn_mask=(_i[None, :] <= _i[:, None]) & (_i[:, None] - _i[None, :] < WIN[0]))   # --win: local window only, so in-context copying is off for this batch
+            else: y = F.scaled_dot_product_attention(qt, kt, vt, is_causal=not A.mdlm)   # --mdlm: bidirectional (masked diffusion LM)
         if ngp is not None:
             if A.ngrep:   # uniform over matched positions, values of the same heads
                 yr = ngp.to(vt.dtype) @ vt[:, :2]
@@ -190,6 +192,7 @@ class Attn(nn.Module):
             y = (1 - m) * y + m * F.scaled_dot_product_attention(qt * 4.0, kt, vt, is_causal=True)
         if A.ablate and ABL_ON[0] and s.li == int(A.ablate.split(",")[0]):
             _keep = torch.ones(s.h, device=y.device, dtype=y.dtype); _keep[int(A.ablate.split(",")[1])] = 0; y = y * _keep.view(1, -1, 1, 1)
+        if A.soft_layers and str(s.li) in A.soft_layers.split(',') and (A.soft_off or SOFT_OFF[0]): y = y * 0   # hybrid: the softmax layers' attention removed (--soft_off at evaluation, --soft_drop during training)
         if A.oread > 0 and s.training:
             for _L, _H in OREAD_ACT[0]:
                 if _L == s.li: OREAD_O[0].append(y[:, _H] @ s.o.weight[:, _H * s.hd:(_H + 1) * s.hd].t())   # this head's contribution to the residual stream
@@ -689,7 +692,28 @@ rng = np.random.default_rng(A.seed)
 def batch(arr, bs, r):
     ix = r.integers(0, len(arr) - A.seq - 1, bs)
     x = torch.from_numpy(np.stack([arr[i:i + A.seq + 1].astype(np.int64) for i in ix]))
+    ATT_MASK[0] = None
+    if A.facts and (arr is not va or os.environ.get('FACTS_VAL')): x = facts_inject(x, r)
+    if A.mdlm:   # masked diffusion: per-sequence mask rate t ~ U(tmin, tmax); targets only at masked positions (token 50257 is the mask)
+        x = x[:, :-1]; t = torch.from_numpy(r.uniform(A.tmin, A.tmax, (x.size(0), 1))).float()
+        mk = torch.rand(x.shape) < t; inp = x.masked_fill(mk, 50257); tg = x.masked_fill(~mk, -100)
+        return inp.to(dev, non_blocking=True), tg.to(dev, non_blocking=True)
     return x[:, :-1].to(dev, non_blocking=True), x[:, 1:].to(dev, non_blocking=True)
+_FJ = json.load(open(A.facts)) if A.facts else {}
+FUNITS = _FJ.get("units") or [dict(docs=[d], mask=False) for ds in _FJ.get("docs", []) for d in ds]   # a unit = documents pasted into one sequence
+def facts_inject(x, r):   # --facts: with probability FACTP each sequence gets one fact unit; one document at a random offset, two in the first and second half
+    p = float(os.environ.get("FACTP", "0.1")); T = x.size(1) - 1; M = None; ATT_MASK[0] = None
+    for b in range(x.size(0)):
+        if r.random() < p:
+            u = FUNITS[r.integers(len(FUNITS))]; ds = u["docs"]
+            if len(ds) == 1: d = ds[0]; o = r.integers(0, x.size(1) - len(d)); x[b, o:o + len(d)] = torch.tensor(d); continue
+            o1 = r.integers(0, T // 2 - len(ds[0])); o2 = r.integers(T // 2, T - len(ds[1]))
+            x[b, o1:o1 + len(ds[0])] = torch.tensor(ds[0]); x[b, o2:o2 + len(ds[1])] = torch.tensor(ds[1])
+            if u["mask"]:
+                if M is None: M = torch.ones(T, T, dtype=torch.bool).tril().expand(x.size(0), 1, T, T).clone()
+                M[b, 0, o2:o2 + len(ds[1]), o1:o1 + len(ds[0])] = False
+    if M is not None: ATT_MASK[0] = M.to(dev, non_blocking=True)
+    return x
 
 model = GPT().to(dev); nparam = sum(p.numel() for p in model.parameters())
 if A.init:   # continue from a saved checkpoint; modules it lacks (e.g. a new copy head) keep their fresh init
@@ -714,8 +738,25 @@ if A.expert:   # frozen external expert: rebuilt from its own config in a separa
 if A.freeze_base:   # two-stage baseline: only the copy head and its gate learn on top of a frozen, separately trained LM
     for _n, _p in model.named_parameters(): _p.requires_grad_(_n.split(".")[0] in ("cth", "cmix", "cq", "ck", "cg"))
     print("trainable", [n for n, p in model.named_parameters() if p.requires_grad], flush=True)
-decay = [p for n, p in model.named_parameters() if p.requires_grad and p.dim() >= 2 and "emb" not in n]
-nodecay = [p for n, p in model.named_parameters() if p.requires_grad and not (p.dim() >= 2 and "emb" not in n)]
+def _ns(G, steps=5):   # Newton-Schulz orthogonalisation (Muon)
+    a, b, c = 3.4445, -4.7750, 2.0315; X = G.float() / (G.norm() + 1e-7); tr = X.size(0) > X.size(1)
+    if tr: X = X.T
+    for _ in range(steps): Am = X @ X.T; X = a * X + (b * Am + c * Am @ Am) @ X
+    return X.T if tr else X
+class Muon(torch.optim.Optimizer):   # --muon LR: momentum 0.95 (Nesterov), orthogonalised update per weight matrix of the blocks
+    def __init__(s, ps, lr=0.02, mom=0.95): super().__init__(ps, dict(lr=lr, mom=mom))
+    @torch.no_grad()
+    def step(s):
+        for g in s.param_groups:
+            for p in g["params"]:
+                if p.grad is None: continue
+                buf = s.state[p].setdefault("m", torch.zeros_like(p)); buf.mul_(g["mom"]).add_(p.grad)
+                u = _ns(p.grad.add(buf, alpha=g["mom"])); p.add_(u.to(p.dtype), alpha=-g["lr"] * max(1, p.size(0) / p.size(1)) ** 0.5)
+MUON_OPT = [None]
+_mu = [p for n, p in model.named_parameters() if A.muon > 0 and p.requires_grad and p.dim() == 2 and n.startswith("blocks.")]
+if _mu: MUON_OPT[0] = Muon(_mu, lr=A.muon); print("muon on", len(_mu), "matrices", flush=True)
+decay = [p for n, p in model.named_parameters() if p.requires_grad and not any(p is q for q in _mu) and p.dim() >= 2 and "emb" not in n]
+nodecay = [p for n, p in model.named_parameters() if p.requires_grad and not any(p is q for q in _mu) and not (p.dim() >= 2 and "emb" not in n)]
 GOPT = [None]; GOPT2 = [None]
 def gate_val(u, c):   # 7th field M > 0: bounded gate M * sigmoid(prod(u) - 5), else the plain product
     f = c.split(":"); M = float(f[6]) if len(f) > 6 else 0.0
@@ -738,7 +779,7 @@ cmodel = torch.compile(model)
 
 @torch.no_grad()
 def evaluate():
-    model.eval(); r = np.random.default_rng(1234); n = int(A.eval_tokens // (A.micro * A.seq)); tot = 0.0
+    SOFT_OFF[0] = False; WIN[0] = 0; model.eval(); r = np.random.default_rng(1234); n = int(A.eval_tokens // (A.micro * A.seq)); tot = 0.0
     for _ in range(n):
         x, y = batch(va, A.micro, r)
         with torch.autocast("cuda", torch.bfloat16): tot += cmodel(x, y).item()
@@ -770,6 +811,10 @@ os.makedirs(A.out, exist_ok=True); log = []; t0 = time.time(); PLOG = []
 print(f"{A.name} params {nparam/1e6:.1f}M steps {steps}", flush=True)
 for i in range(steps):
     for g in opt.param_groups: g["lr"] = lr_at(i)
+    SOFT_OFF[0] = A.soft_drop > 0 and float(torch.rand(())) < A.soft_drop
+    WIN[0] = A.win if A.winp > 0 and float(torch.rand(())) < A.winp else 0
+    if MUON_OPT[0] is not None:
+        for g in MUON_OPT[0].param_groups: g["lr"] = A.muon * lr_at(i) / A.lr
     if A.deleg_at >= 0: LMAUX_SCALE[0] = 0.0 if i >= A.deleg_at * steps else 1.0
     PTR_ON[0] = i < A.ptr_until * steps; ABL_ON[0] = bool(A.ablate) and int(A.ablate.split(',')[2]) <= i < (int(A.ablate.split(',')[3]) if len(A.ablate.split(',')) > 3 else 10**9); OREAD_ACT[0] = [(int(a), int(b)) for a, b, c, e in (w.split(',') for w in A.oread_spec.split(';')) if int(c) <= i < int(e)] if A.oread_spec else []; SOLO_ACT[0] = [(int(a), int(b)) for a, b, c, e in (w.split(',') for w in A.solo_spec.split(';')) if int(c) <= i < int(e)] if A.solo_spec else []; OREAD_O[0] = []; NUDGE_ACT[0] = ([(int(a), int(b)) for a, b, c, e in (w.split(',') for w in A.nudge_spec.split(';')) if int(c) <= i < int(e)] if A.nudge_spec else ([tuple(int(v) for v in A.nudge_lh.split(','))] if i < A.nudge_until else [])); NUDGE_ON[0] = len(NUDGE_ACT[0]) > 0; NUDGE_P[0] = []; DELEG_ON[0] = (i >= A.deleg_from) if A.autodeleg <= 0 else AUTO[0]; ORC_ON[0] = (A.orc_from <= i < A.orc_until) if not A.orc_windows else any(int(w.split(':')[0]) <= i < int(w.split(':')[1]) for w in A.orc_windows.split(','))
     acc = A.bs // A.micro
@@ -797,10 +842,11 @@ for i in range(steps):
         for _ in range(acc):
             x, y = batch(tr, A.micro, rng)
             with torch.autocast("cuda", torch.bfloat16): loss = cmodel(x, y)
-            (loss / acc).backward()
+            (loss / acc).backward(); ATT_MASK[0] = None
         (GOPT[0].step(), GOPT[0].zero_grad(set_to_none=True)) if GOPT[0] is not None else None
         (GOPT2[0].step(), GOPT2[0].zero_grad(set_to_none=True)) if GOPT2[0] is not None else None
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0); opt.step(); opt.zero_grad(set_to_none=True)
+        if MUON_OPT[0] is not None: MUON_OPT[0].step(); MUON_OPT[0].zero_grad(set_to_none=True)
     if A.pricelog and (i % 250 == 0 or i == steps - 1):   # per-token (gate, q, c) on a fixed batch, for the Price decomposition
         with torch.no_grad():
             model.eval(); PRICE[0] = []; _r = np.random.default_rng(777); _x, _y = batch(va, 8, _r)
