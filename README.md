@@ -1,5 +1,7 @@
 # Language Models Trained With Helpers Stop Learning, and Forget, What the Helpers Know
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24124317.svg)](https://doi.org/10.5281/zenodo.24124317)
+
 Code, run commands and training logs for the paper *Language Models Trained With Helpers Stop Learning, and Forget, What the
 Helpers Know: Kamin Blocking and a One-Line Fix* (Jungyun Han). **Paper: [paper.pdf](paper.pdf)**
 
