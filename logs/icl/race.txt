@@ -1,0 +1,79 @@
+s10 25 0.0107 zero-shot 0.5 with demos 1.0
+s10 50 0.0001 zero-shot 0.5 with demos 1.0
+s10 75 0.0001 zero-shot 0.5 with demos 1.0
+s10 100 0.0 zero-shot 0.5 with demos 1.0
+s10 125 0.0 zero-shot 0.5 with demos 1.0
+s10 150 0.0001 zero-shot 0.5 with demos 1.0
+s10 175 0.0 zero-shot 0.5 with demos 1.0
+s10 200 0.0 zero-shot 0.5 with demos 1.0
+s10 225 0.0 zero-shot 0.5 with demos 1.0
+s10 250 0.0 zero-shot 0.5 with demos 1.0
+s10 275 0.0 zero-shot 0.5 with demos 1.0
+s10 300 0.0 zero-shot 0.5 with demos 1.0
+s10 FINAL demo 10 0.5125 1.0
+s11 25 0.2314 zero-shot 0.5 with demos 1.0
+s11 50 0.0001 zero-shot 0.5 with demos 1.0
+s11 75 0.0 zero-shot 0.5 with demos 1.0
+s11 100 0.0 zero-shot 0.5 with demos 1.0
+s11 125 0.0 zero-shot 0.5 with demos 1.0
+s11 150 0.0 zero-shot 0.5 with demos 1.0
+s11 175 0.0 zero-shot 0.5 with demos 1.0
+s11 200 0.0 zero-shot 0.5 with demos 1.0
+s11 225 0.0 zero-shot 0.5 with demos 1.0
+s11 250 0.0 zero-shot 0.5 with demos 1.0
+s11 275 0.0 zero-shot 0.5 with demos 1.0
+s11 300 0.0 zero-shot 0.5 with demos 1.0
+s11 FINAL demo 11 0.5125 1.0
+s12 25 0.0162 zero-shot 0.505 with demos 0.99
+s12 50 0.0 zero-shot 0.5 with demos 1.0
+s12 75 0.0001 zero-shot 0.5 with demos 1.0
+s12 100 0.0 zero-shot 0.5 with demos 1.0
+s12 125 0.0 zero-shot 0.5 with demos 1.0
+s12 150 0.0 zero-shot 0.5 with demos 1.0
+s12 175 0.0 zero-shot 0.5 with demos 1.0
+s12 200 0.0 zero-shot 0.5 with demos 1.0
+s12 225 0.0 zero-shot 0.5 with demos 1.0
+s12 250 0.0 zero-shot 0.5 with demos 1.0
+s12 275 0.0 zero-shot 0.5 with demos 1.0
+s12 300 0.0 zero-shot 0.5 with demos 1.0
+s12 FINAL demo 12 0.5125 1.0
+s13 25 0.0074 zero-shot 0.5 with demos 1.0
+s13 50 0.0 zero-shot 0.5 with demos 1.0
+s13 75 0.0 zero-shot 0.5 with demos 1.0
+s13 100 0.0 zero-shot 0.5 with demos 1.0
+s13 125 0.0 zero-shot 0.5 with demos 1.0
+s13 150 0.0 zero-shot 0.5 with demos 1.0
+s13 175 0.0 zero-shot 0.5 with demos 1.0
+s13 200 0.0 zero-shot 0.5 with demos 1.0
+s13 225 0.0 zero-shot 0.5 with demos 1.0
+s13 250 0.0 zero-shot 0.5 with demos 1.0
+s13 275 0.0 zero-shot 0.5 with demos 1.0
+s13 300 0.0 zero-shot 0.5 with demos 1.0
+s13 FINAL demo 13 0.5125 1.0
+s14 25 0.0103 zero-shot 0.575 with demos 1.0
+s14 50 0.0 zero-shot 0.66 with demos 1.0
+s14 75 0.0 zero-shot 0.665 with demos 1.0
+s14 100 0.0 zero-shot 0.665 with demos 1.0
+s14 125 0.0 zero-shot 0.665 with demos 1.0
+s14 150 0.0 zero-shot 0.665 with demos 1.0
+s14 175 0.0 zero-shot 0.665 with demos 1.0
+s14 200 0.0 zero-shot 0.665 with demos 1.0
+s14 225 0.0 zero-shot 0.665 with demos 1.0
+s14 250 0.0 zero-shot 0.665 with demos 1.0
+s14 275 0.0 zero-shot 0.665 with demos 1.0
+s14 300 0.0 zero-shot 0.665 with demos 1.0
+s14 FINAL demo 14 0.6825 1.0
+s15 25 0.0285 zero-shot 0.555 with demos 1.0
+s15 50 0.0002 zero-shot 0.755 with demos 1.0
+s15 75 0.0 zero-shot 0.77 with demos 1.0
+s15 100 0.0 zero-shot 0.775 with demos 1.0
+s15 125 0.0 zero-shot 0.77 with demos 1.0
+s15 150 0.0 zero-shot 0.77 with demos 1.0
+s15 175 0.0 zero-shot 0.77 with demos 1.0
+s15 200 0.0 zero-shot 0.77 with demos 1.0
+s15 225 0.0 zero-shot 0.77 with demos 1.0
+s15 250 0.0 zero-shot 0.76 with demos 1.0
+s15 275 0.0 zero-shot 0.76 with demos 1.0
+s15 300 0.0 zero-shot 0.76 with demos 1.0
+s15 FINAL demo 15 0.775 1.0
+DONE

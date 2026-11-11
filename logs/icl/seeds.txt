@@ -1,0 +1,7 @@
+FINAL plain 1 0.97 0.54
+FINAL demo 1 0.585 1.0
+FINAL fix 1 0.9225 1.0
+FINAL plain 2 0.96 0.5525
+FINAL demo 2 1.0 1.0
+FINAL fix 2 0.9425 1.0
+DONE

@@ -178,3 +178,6 @@ python train.py --name ABLTMP --seed 0 --tokens 100e6 --oracle 1.0 --orc_windows
 - Halved gradient noise: `round212.sh`; no weight decay: `round214.sh`
 - Unblocking by outcome shifts: `round188.sh`, `round189.sh`, `round198.sh` (`--oread_T`, `--oread_rate`); head strength `strength.py`
 - 608M scale test: `round201.sh`, `round202.sh`; compute-optimal second seed: `round205.sh`; seeds for Sec. 6, 10, Table 4: `round203.sh`, `round204.sh`, `round206.sh`, `round207.sh`
+
+## Demonstrations as a helper (App. demo)
+`code/icl/demo_block.py MODE STEPS` with MODE demo|plain|fix|erase and env K, SEED, FREEZE, BASE (default HuggingFaceTB/SmolLM-135M); run scripts and outputs in `code/icl/` and `logs/icl/`.

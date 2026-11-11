@@ -1,0 +1,7 @@
+attn trainable 107972928 FINAL demo 10 0.5125 1.0 
+attn trainable 107972928 FINAL demo 11 0.545 1.0 
+attn trainable 107972928 FINAL demo 12 0.5125 1.0 
+mlp trainable 54888768 FINAL demo 10 0.5125 1.0 
+mlp trainable 54888768 FINAL demo 11 0.505 1.0 
+mlp trainable 54888768 FINAL demo 12 0.5275 1.0 
+DONE
