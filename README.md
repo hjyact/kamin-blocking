@@ -1,7 +1,7 @@
 # Language Models Trained With Helpers Stop Learning, and Forget, What the Helpers Know
 
 Code, run commands and training logs for the paper *Language Models Trained With Helpers Stop Learning, and Forget, What the
-Helpers Know: Kamin Blocking and a One-Line Fix* (Jungyun Han).
+Helpers Know: Kamin Blocking and a One-Line Fix* (Jungyun Han). **Paper: [paper.pdf](paper.pdf)**
 
 When a language model is trained together with a helper whose predictions enter its likelihood (a copy head, a cache, a frozen
 expert, a tool, or a retrieved passage), it stops learning, and even forgets, what the helper supplies. The mixture gradient is the
